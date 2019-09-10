@@ -18,19 +18,14 @@ public class GradeServiceImp implements GradeService {
 
 	@Override
 	public void creatGrade(GradeBean param) {
-		param.setStudentNum(createStudentNum(param));
-		dao.insertGrade(param);
+	
 		
 	}
 	public String createStudentNum(GradeBean param) {
-		Date date= new Date();
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy");
+	
+	
 		String studentNum="";
-		String ssn = param.getSsn();
-		Random ran= new Random();
-		int temp = ran.nextInt(999)+1;
-		String s= String.format("%03d",temp);
-		studentNum = sdf.format(date)+"-"+ssn.substring(7,8)+s;
+	
 		
 		return studentNum;
 	}

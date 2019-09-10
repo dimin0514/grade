@@ -25,14 +25,7 @@ public class GradeController extends HttpServlet {
 		String math=request.getParameter("math");
 		String soc=request.getParameter("soc");
 		GradeBean param = new GradeBean();
-		param.setEng(eng);
-		param.setKor(kor);
-		param.setMath(math);
-		param.setName(name);
-		param.setSoc(soc);
-		param.setSsn(ssn);
-		service.creatGrade(param);
-		
+
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 

@@ -6,31 +6,7 @@ public class GradeBean implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 
-	private String studentNum, name, ssn, kor, eng, math, soc;
-
-	public String getStudentNum() {
-		return studentNum;
-	}
-
-	public void setStudentNum(String studentNum) {
-		this.studentNum = studentNum;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getSsn() {
-		return ssn;
-	}
-
-	public void setSsn(String ssn) {
-		this.ssn = ssn;
-	}
+	private String kor, eng, math, soc;
 
 	public String getKor() {
 		return kor;
@@ -64,15 +40,11 @@ public class GradeBean implements Serializable{
 		this.soc = soc;
 	}
 
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
-
 	@Override
 	public String toString() {
-		return "StudentBean [studentNum=" + studentNum + ", name=" + name + ", ssn=" + ssn + ", kor=" + kor + ", eng="
-				+ eng + ", math=" + math + ", soc=" + soc + "]";
+		return "GradeBean [kor=" + kor + ", eng=" + eng + ", math=" + math + ", soc=" + soc + "]";
 	}
+	
 	
 	
 	

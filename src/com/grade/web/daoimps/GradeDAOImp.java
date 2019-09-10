@@ -16,16 +16,14 @@ public class GradeDAOImp implements GradeDAO{
 			,File.separator
 			,File.separator
 			,File.separator);
+	public static final String VIEW_PATH = "WEB-INF/views/%s/%s.jsp";
+	
 
 	@Override
 	public void insertGrade(GradeBean param) {
 		try {
 			File file = new File(FILE_PATH+"grade.txt");
-			@SuppressWarnings("resource")
-			BufferedWriter writer = new BufferedWriter(new FileWriter(file,true));
-			writer.write(String.format("%s,%s,%s,%s,%s,%s",param.getStudentNum(),param.getName(),param.getKor(),param.getEng(),param.getSoc(),param.getMath()));
-			writer.newLine();
-			writer.flush();
+
 			
 		}catch(Exception e) {
 			e.printStackTrace();
